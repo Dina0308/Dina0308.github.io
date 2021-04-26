@@ -13,4 +13,79 @@
     &__subtitle {
         text-align: center;
     }
+    &__wrapper {
+        padding: 0 65px 0 65px;
+        display: grid;
+        grid-template-columns: 425px 425px;
+        column-gap: 136px;
+        
+    }
+    &__column {
+       ul {
+           list-style-type: none;
+           li {
+               position: relative;
+               padding-left: 43px;
+               margin-bottom: 45px;
+               &::after {
+                   content: '';
+                   width: 1px;
+                   height: calc(100% + 53px);
+                   background: #000;
+                   position: absolute;
+                   left: 0;
+                   top: -53px;
+               }
+           }
+       }
+        &-title {
+            margin-bottom: 45px;
+            position: relative;
+            padding-left: 43px;
+            &::before {
+                content: '';
+                position: absolute;
+                border-radius: 100%;
+                width: 15px;
+                height: 15px;
+                background: $main-color;
+                left: -7px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+    }
+    &__item{
+        position: relative;
+        &::before {
+            content: '';
+            width: 43px;
+            height: 1px;
+            background: #000;
+            position: absolute;
+            left: -43px;
+            top: 25px;
+        }
+        &-head {
+            padding-left: 56px;
+            position: relative;
+        }
+        &_icon {
+            position: absolute;
+            left: 17px;
+            bottom: 0;
+            @include before_circle;
+            &:before {
+                left: -17px;
+            }
+    }
+    &_text {
+        margin-top: 12px;
+        font-size: 12px;
+        line-height: 18px;
+
+        color: #000000;
+    }
+}
 }
