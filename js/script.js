@@ -10,6 +10,7 @@ closeElem.addEventListener('click', () => {
     menu.classList.remove('active');
 });
 
+//ratings block
 const counters = document.querySelectorAll('.skills__raiting_numb'),
       lines = document.querySelectorAll('.skills__raiting_line span');
 
