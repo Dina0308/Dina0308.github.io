@@ -39,6 +39,10 @@ body {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border: none;
     padding: 12px 25px;
+    &:hover {
+        background-color: rgba(255, 161, 1, .7);
+        cursor: pointer;
+    }
 }
 
 .divider {
@@ -57,3 +61,4 @@ body {
 @import "_skills";
 @import "_portf";
 @import "_price";
+@import "_contacts";
