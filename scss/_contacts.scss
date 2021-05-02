@@ -86,4 +86,11 @@
         font-weight: bold;
         
     }
+    &__trigger {
+        grid-column: 1/3;
+    }
+    .policy {
+        margin-left: 35px;
+        font-size: 12px;
+    }
 }
