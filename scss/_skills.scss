@@ -29,7 +29,7 @@
     }
     &__raiting {
         display: grid;
-        grid-template: repeat(2, minmax(70px, auto)) / repeat(3, 350px);
+        grid-template: repeat(2, minmax(70px, auto)) / repeat(3, auto);
         column-gap: 45px;
         row-gap: 30px;
         &__item {
