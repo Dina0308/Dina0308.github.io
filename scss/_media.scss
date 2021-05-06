@@ -46,6 +46,7 @@
          grid-template-columns: repeat(3, 235px);
          margin-bottom: 60px;
          gap: 8px;
+         justify-content: center;
      }
      &__raiting {
          column-gap: 35px;
@@ -57,6 +58,7 @@
  .portf {
      &__wrapper {
         grid-template: repeat(2, 240px)/repeat(3, 240px);
+        justify-content: center;
         .vertical {
             grid-row: 2/3;
             grid-column: 1/2;
