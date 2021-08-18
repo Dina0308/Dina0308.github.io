@@ -18,12 +18,17 @@ menuItem.forEach(item => {
     })
 })
 
-
-//ratings block
-const counters = document.querySelectorAll('.skills__raiting_numb'),
-      lines = document.querySelectorAll('.skills__raiting_line span');
-
-counters.forEach( (item, i) => {
-    lines[i].style.width = item.innerHTML;
+//swiper 
+const swiper = new Swiper('.swiper-container', {
+    loop: true,
+  
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }
 });
 

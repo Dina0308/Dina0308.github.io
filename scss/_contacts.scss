@@ -93,4 +93,14 @@
         margin-left: 35px;
         font-size: 12px;
     }
+    &__contacts {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 80px 80px;
+        grid-auto-rows: 80px;
+        margin-top: 30px;
+        border: 3px solid $main-color;
+        border-radius: 5px;
+        padding: 10px;
+    }
 }

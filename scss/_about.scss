@@ -11,7 +11,7 @@
         grid-template-rows: minmax(245px auto) minmax(300px auto);
         column-gap: 70px;
         row-gap: 40px;
-        grid-auto-rows: minmax(245px, auto);
+        grid-auto-rows: minmax(135px, auto);
     }
     &__photo {
         grid-row: 1/3;
