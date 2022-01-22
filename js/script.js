@@ -1,4 +1,5 @@
-const hamburger = document.querySelector('.hamburger'),
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.querySelector('.hamburger'),
         menu = document.querySelector('.menu'),
         closeElem = document.querySelector('.menu__close'),
         menuItem = document.querySelectorAll('.menu__link');
@@ -115,29 +116,14 @@ const swiper = new Swiper('.swiper-container', {
 
 //     });
 //   });
-var a = document.querySelectorAll(".portfolio__youtube-link")
-      , l = document.getElementById("youtube-modal")
-      , e = document.getElementById("youtube-close")
-      , c = document.getElementById("youtube-frame");
-    a.forEach(function(t) {
-        t.addEventListener("click", function(e) {
-            e.preventDefault();
-            e = t.dataset.id;
-            c.src = "https://www.youtube.com/embed/".concat(e, "?controls=0"),
-            setTimeout(function() {
-                l.style.display = "block"
-            }, 1e3)
-        })
-    }),
-e.addEventListener("click", function(e) {
-  e.preventDefault(),
-  c.src = "",
-  l.style.display = "none"
-}),
+
+
+
+
 document.querySelectorAll(".form__elem").forEach(function(u) {
   u.addEventListener("submit", function(e) {
       e.preventDefault();
-      for (var e = u.closest(".form"), t = e.querySelector(".form__request"), n = e.querySelector(".form__answer"), i = u.elements, o = {}, r = 0; r < i.length; r++) {
+      for (var e = u.closest(".form"), t = e.querySelector('.form__request'), n = e.querySelector(".form__answer"), i = u.elements, o = {}, r = 0; r < i.length; r++) {
           var s = i.item(r)
             , a = s.name
             , l = String(s.value).trim();
@@ -173,4 +159,7 @@ document.querySelectorAll(".form__elem").forEach(function(u) {
       })
   })
 })
+
+});
+
 
