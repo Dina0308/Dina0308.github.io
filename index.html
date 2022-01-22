@@ -480,7 +480,7 @@
                     <p class="title title_fs36 contacts__subtitle">Свяжитесь со мной</p>
                     <div class="divider"></div>
                     <p class="contacts__text title">Любым удобным для вас способом:</p>
-                    <div class="contacts__contacts">
+                    <!-- <div class="contacts__contacts">
                         <div class="contacts__item">
                             <p class="title title_fs20 contacts__subtitle">Телеграм</p>
                             <a href="tg://@shel_din" class="contacts__link__name">@shel_din</a>
@@ -497,36 +497,53 @@
                             <p class="title title_fs20 contacts__subtitle">Instagram</p>
                             <a href="https://www.instagram.com/dina_website/" class="contacts__link__name">dina_website</a>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="contacts__soc">
                         <a href="mailto:sharipova0308@gmaol.com" class="contacts__link" target="_blank"><span class="icon-mail4"></span></a>
                         <a href="https://www.instagram.com/dina_website/" class="contacts__link" target="_blank"><span class="icon-instagram"></span></a>
                         <a href="tg://@shel_din" class="contacts__link" target="_blank"><span class="icon-telegram"></span></a>
                         <a href="https://github.com/Dina0308" class="contacts__link" target="_blank"><span class="icon-github"></span></a>
                     </div>
-                    <!-- <p class="contacts__text title">Или оставьте ваши данные и я сама вам напишу:</p> -->
-                    <!-- <form action="#" class="contacts__form">
-                        <div class="contacts__input">
-                            <input id="name" name="name" type="text">
-                            <label for="name">Ваше имя</label>
-                        </div>
-                        <div class="contacts__input">
-                            <input id="email" name="email" type="email">
-                            <label for="email">Ваша почта</label>
-                        </div>
-                        <div class="contacts__textarea">
-                            <textarea name="text" id="textarea"></textarea>
-                            <label for="textarea">Ваше сообщение</label>
-                        </div>
-                        <div class="contacts__trigger">
-                            <button class="btn contacts__btn">Отправить сообщение</button>
-                            <span class="policy">
-                                <input type="checkbox" required>
-                                Я согласен(а) с <a href="policy.html" target="_blank">политикой конфиденциальности</a>
-                            </span>
-                        </div>
-                    </form> -->
-
+                  
+                   <div class="form__request">
+                    <h4 class="form__title contacts__text title">
+                        Или оставьте ваши данные и я сама вам напишу:
+                    </h4>
+    
+                    <form action="#" class="form__elem contacts__form">
+                      <div class="form__row contacts__input">
+                        <input id="name" type="text" class="form__input" name="name" autocomplete="off" >
+                        <label for="name">Ваше имя</label>
+                      </div>
+                      <div class="form__row contacts__input">
+                        <input id="email" type="email" class="form__input" name="email" autocomplete="off" >
+                        <label for="email">Ваша почта</label>
+                      </div>
+                      <div class="form__row contacts__textarea">
+                        <textarea id="textarea" class="form__input form__input--textarea" 
+                          name="message" resize></textarea>
+                          <label for="textarea">Ваше сообщение</label>
+                      </div>
+                      <div class="form__row contacts__textarea">
+                        <textarea name="text" id="site" class="form__input form__input--textarea"></textarea>
+                        <label for="textarea">Отправьте ссылку на ваш сайт - я бесплатно проконсультирую и предложу улучшения</label>
+                    </div>
+                      <div class="form__row contacts__trigger">
+                        <button class="btn form__btn contacts__btn">Отправить заявку</button>
+                        <span class="policy">
+                            <input type="checkbox" required>
+                            Я согласен(а) с <a href="policy.html" target="_blank">политикой конфиденциальности</a>
+                        </span>
+                      </div>
+                    </form>
+                  </div>
+                    <div class="form__answer">
+                        <h4 class="form__answer-title">Спасибо
+                          за обращение!</h4>
+                          <div class="form__answer-text">
+                            Я свяжусь с Вами в ближайшее время.
+                          </div>
+                      </div>
                 </div>
             </div>
         </div>
