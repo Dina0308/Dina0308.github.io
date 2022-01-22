@@ -29,12 +29,44 @@ closeElem.addEventListener('click', () => {
     menu.classList.remove('active');
 });
 
-menuItem.forEach(item => {
-    item.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        menu.classList.toggle('active');
-    })
-})
+// menuItem.forEach(item => {
+//     item.addEventListener('click', () => {
+//         hamburger.classList.toggle('active');
+//         menu.classList.toggle('active');
+//     })
+// })
+//плавнй скролл к якорям
+
+var linkNav = document.querySelectorAll('[href^="#"]'), //выбираем все ссылки к якорю на странице
+V = 0.2;  // скорость, может иметь дробное значение через точку (чем меньше значение - тем больше скорость)
+linkNav.forEach(item => {
+item.addEventListener('click', (e) => {
+e.preventDefault();
+menu.classList.remove('active');
+});
+});
+for (var i = 0; i < linkNav.length; i++) {
+linkNav[i].addEventListener('click', function(e) { //по клику на ссылку
+e.preventDefault(); //отменяем стандартное поведение
+var w = window.pageYOffset,  // производим прокрутка прокрутка
+hash = this.href.replace(/[^#]*(.*)/, '$1');  // к id элемента, к которому нужно перейти
+t = document.querySelector(hash).getBoundingClientRect().top,  // отступ от окна браузера до id
+start = null;
+requestAnimationFrame(step); 
+function step(time) {
+if (start === null) start = time;
+var progress = time - start,
+  r = (t < 0 ? Math.max(w - progress/V, w + t) : Math.min(w + progress/V, w + t));
+window.scrollTo(0,r);
+if (r != w + t) {
+  requestAnimationFrame(step)
+} else {
+  location.hash = hash  // URL с хэшем
+}
+}
+}, false);
+
+}
 
 //swiper 
 const swiper = new Swiper('.swiper-container', {
@@ -95,6 +127,8 @@ modalClose.addEventListener('click', function() {
       modal.style.display='none';
       console.log('ok');
 });
+
 });
+
 
 
