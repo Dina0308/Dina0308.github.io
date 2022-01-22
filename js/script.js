@@ -115,6 +115,20 @@ const swiper = new Swiper('.swiper-container', {
 
 //     });
 //   });
+var a = document.querySelectorAll(".portfolio__youtube-link")
+      , l = document.getElementById("youtube-modal")
+      , e = document.getElementById("youtube-close")
+      , c = document.getElementById("youtube-frame");
+    a.forEach(function(t) {
+        t.addEventListener("click", function(e) {
+            e.preventDefault();
+            e = t.dataset.id;
+            c.src = "https://www.youtube.com/embed/".concat(e, "?controls=0"),
+            setTimeout(function() {
+                l.style.display = "block"
+            }, 1e3)
+        })
+    }),
 e.addEventListener("click", function(e) {
   e.preventDefault(),
   c.src = "",
