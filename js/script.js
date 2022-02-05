@@ -85,7 +85,7 @@ const swiper = new Swiper('.swiper-container', {
 document.querySelectorAll(".form__elem").forEach(function(u) {
   u.addEventListener("submit", function(e) {
       e.preventDefault();
-      for (var e = u.closest(".form"), t = e.querySelector('.form__request'), n = e.querySelector(".form__answer"), i = u.elements, o = {}, r = 0; r < 2; r++) {
+      for (var e = u.closest(".form"), t = e.querySelector('.form__request'), n = e.querySelector(".form__answer"), i = u.elements, o = {}, r = 0; r < 4; r++) {
           var s = i.item(r)
             , a = s.name
             , l = String(s.value).trim();
@@ -97,6 +97,7 @@ document.querySelectorAll(".form__elem").forEach(function(u) {
               console.log(o)
           }
       }
+      
       var c, d = "";
       for (c in o)
           d += "<b>".concat(c, "</b> ").concat(o[c], "\n");
@@ -112,6 +113,7 @@ document.querySelectorAll(".form__elem").forEach(function(u) {
               text: d
           })
       };
+      
       fetch("https://api.telegram.org/bot".concat("5054421186:AAHzIR1yfMB6n519LDXQ5-9911ZbdqulnEA", "/sendMessage"), e).then(function(e) {
           return e.json()
       }).then(function(e) {
@@ -125,7 +127,7 @@ const modalClose = document.querySelector('.modal__close'),
       modal = document.querySelector('.form__answer');
 modalClose.addEventListener('click', function() {
       modal.style.display='none';
-      console.log('ok');
+      
 });
 
 });
