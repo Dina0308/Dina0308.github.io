@@ -115,6 +115,7 @@ $main-color: #2B924B;
     }
 }
 
+
 .divider {
     width: 60px;
     height: 3px;
@@ -151,6 +152,10 @@ $main-color: #2B924B;
             text-decoration: underline;
             
         }
+    }
+    .btn2 {
+        padding: 12px 25px;
+        background: rgba(255, 255,255, .6);
     }
     &__subtitle {
         position: relative;
