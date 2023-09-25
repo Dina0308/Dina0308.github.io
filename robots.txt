@@ -1,0 +1,6 @@
+
+User-agent: *
+Disallow: https://dina0308.github.io/puls/index.html
+Disallow: https://dina0308.github.io/portf/index.html
+Disallow: https://dina0308.github.io/policy.html
+
