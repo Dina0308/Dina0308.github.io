@@ -1,7 +1,7 @@
 
 User-agent: *
-Disallow: https://dina0308.github.io/puls/index.html
-Disallow: https://dina0308.github.io/portf/index.html
-Disallow: https://dina0308.github.io/policy.html
+Disallow: /puls/index.html
+Disallow: /portf/index.html
+Disallow: /policy.html
 Sitemap: https://dina0308.github.io/sitemap.xml
 
