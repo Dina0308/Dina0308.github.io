@@ -553,15 +553,17 @@ $main-color: #2B924B;
     padding: 20px 0 120px;
     position: relative;
     &__wrapper {
-        display: flex;
-        justify-content: center;
+        display: grid;
+       grid-template-columns: repeat(2, 1fr);
+       gap: 16px;
         padding: 0 60px;
+
      }
      &__img {
          margin-right: 30px;
          border-radius: 12px;
-         width: 316px;
-         height: 354px;
+         max-width: 100%;
+         margin-top: 24px;
      }
      .title {
          margin-top: 20px;
@@ -571,6 +573,34 @@ $main-color: #2B924B;
      }
      .swiper-pagination-bullet-active {
          background: $main-color;
+     }
+     &__link {
+        margin-top: 16px;
+        display: block;
+        text-decoration: none;
+        color: #000;
+        position: relative;
+        line-height: 120%;
+        width: fit-content;
+        font-weight: 600;
+        &:after {
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            background-color: #2b924b;
+            transition: width .3s;
+            bottom: -2px;
+            left: 0;
+        }
+        &:hover {
+            &::after {
+                width: 100%;
+            }
+        }
+     }
+     &__content {
+        padding-bottom: 50px;
      }
  }
  //price
@@ -856,10 +886,7 @@ label[for=site] {
         max-width: 720px;
      }
     .portf {
-        &__wrapper {
-            flex-direction: column;
-            align-items: center;
-        }
+        
         &__content {
             text-align: center;
             padding-bottom: 30px;
@@ -867,7 +894,8 @@ label[for=site] {
     }
     .about {
         &__wrapper {
-            grid-template-columns: 253px 500px;
+            grid-template-columns: 250px 1fr;
+            gap: 16px;
         }
     }
     .contacts {
@@ -917,14 +945,7 @@ label[for=site] {
              grid-template: repeat(3, minmax(70px, auto))/repeat(2, auto);
          }
      }
-     .portf {
-         &__wrapper {
-             grid-template: repeat(3, 240px)/repeat(2, 240px);
-             .horizontal {
-                 grid-column: 2/3;
-             }
-         }
-     }
+     
      .price {
          &__wrapper {
             grid-template: repeat(3, 44px)/repeat(1, 281px);
@@ -936,6 +957,15 @@ label[for=site] {
         }
         &__wrapper {
             display: block;
+        }
+     }
+     .portf {
+        &__wrapper {
+            padding: 0;
+            grid-template-columns: 1fr;
+        }
+        &__link {
+            margin: 16px auto 0;
         }
      }
 }
@@ -1009,9 +1039,11 @@ label[for=site] {
     }
     .portf {
         padding-bottom: 40px;
+        .swiper-button-prev, .swiper-button-next {
+            display: none;
+        }
         &__wrapper {
-            grid-template-columns: 280px;
-            grid-template-rows: repeat(6, 280px);
+            
             .vertical {
                 grid-column: 1/2;
                 grid-row: 4/5;

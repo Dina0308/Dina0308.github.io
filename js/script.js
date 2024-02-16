@@ -79,7 +79,12 @@ const swiper = new Swiper('.swiper-container', {
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
-    }
+    },
+    // breakpoints: {
+    //   640: {
+    //     navigation: false,
+    //   },
+    // },
 });
 //form
 document.querySelectorAll(".form__elem").forEach(function(u) {
